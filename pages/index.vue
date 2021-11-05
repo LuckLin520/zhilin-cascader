@@ -5,6 +5,7 @@
 </template>
 
 <script>
+	import ZhilinCascader from 'zhilin-cascader/zhilin-cascader'
 	const options = [{
 			value: 'zhejiang',
 			label: 'Zhejiang',
@@ -31,6 +32,7 @@
 		}
 	]
 	export default {
+		components: {ZhilinCascader},
 		data() {
 			return {
 				options,
@@ -41,6 +43,9 @@
 			onConfirm(value) {
 				console.log(value)
 			}
+		},
+		mounted() {
+			// console.log(ZhilinCascader)
 		}
 	}
 </script>

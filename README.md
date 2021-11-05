@@ -1,7 +1,9 @@
 #### 使用方法
-1､在 script 中引用组件
+1.HBuilderX导入：直接在template组件中使用
+2.使用npm安装：
+npm i zhilin-cascader
+import ZhilinCascader from 'zhilin-cascader/zhilin-cascader'
 ```javascript
-	//此插件已发布到npm，你也可以使用npm i zhilin-cascader来安装到项目 import ZhilinCascader from 'zhilin-cascader'
     const options = [
         {
             value: 'zhejiang',
@@ -42,7 +44,7 @@
         }
     }
 ```
-2､在 template 中使用组件
+直接在 template 中使用组件
 ```html
 <zhilin-cascader
         v-model="show"
