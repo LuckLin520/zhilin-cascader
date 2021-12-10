@@ -1,6 +1,7 @@
 <template>
 	<view class="content">
-		<zhilin-cascader v-model="show" :options="options" @confirm="onConfirm"></zhilin-cascader>
+		<button type="priamry" @click="show = !show">trigger</button>
+		<zhilin-cascader v-model="show" :options="options" @confirm="onConfirm" :defaultSelected="defaultSelected"></zhilin-cascader>
 	</view>
 </template>
 
@@ -42,7 +43,8 @@
 		data() {
 			return {
 				options,
-				show: true
+				show: false,
+				defaultSelected: ['jiangsu', 'nanjing', 'zhonghuamen']
 			}
 		},
 		methods: {
@@ -54,4 +56,11 @@
 </script>
 
 <style lang="scss">
+	.content{
+		padding-top: 10vh;
+		button{
+			width: 30%;
+		}
+	}
+	
 </style>

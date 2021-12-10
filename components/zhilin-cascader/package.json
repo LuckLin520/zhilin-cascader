@@ -1,6 +1,6 @@
 {
   "_from": "zhilin-cascader",
-  "_id": "zhilin-cascader@1.1.0",
+  "_id": "zhilin-cascader@1.4.0",
   "_inBundle": false,
   "_integrity": "sha512-aXHDbLdK+DNag0KEMdt9IIry4b4j7MEEHRKtXNEtSz73SlTY5fpWwsadpGgjr/TYbdRuY4+TiOs3t/c5YJMxpg==",
   "_location": "/zhilin-cascader",
@@ -19,7 +19,7 @@
     "#USER",
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/zhilin-cascader/-/zhilin-cascader-1.1.0.tgz",
+  "_resolved": "https://registry.npmjs.org/zhilin-cascader/-/zhilin-cascader-1.4.0.tgz",
   "_shasum": "4a49e7d548d851db2f50c0f58590cb72798d2262",
   "_spec": "zhilin-cascader",
   "_where": "C:\\Users\\HC101\\Documents\\HBuilderProjects\\zhilin-cascaderd",
@@ -43,5 +43,5 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "version": "1.2.0"
+  "version": "1.4.0"
 }

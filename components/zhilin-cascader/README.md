@@ -60,6 +60,7 @@ import ZhilinCascader from 'zhilin-cascader/zhilin-cascader'
 | options      | Array/ObjectArray | 是   |          | 格式：[{label:"四川",value:"sc",children:[]}] |
 | title        | String            | 否   | "请选择" | 选择器的标题              |
 | isFullValue | Boolean          | 否   |   false    | 是否限制选择完每一项才能confirm |
+| defaultSelected | Array        | 否   |         | 初始选中项(必须与options数据value对应) |
 | fieldNames | Object          | 否   | {label:'label',value:'value',children:'children'} |  自定义options中label value children的字段 |
 | height        | String            | 否   | 根据设备自适应 | 需要带上相应单位            |
 #### 事件说明

@@ -1,5 +1,5 @@
 <template>
-<uni-popup ref="popup" type="top">
+<uni-popup ref="popup" type="top" @change="popupChange">
 	<view class="zhilin-cascader" :style="{height: height || wrapperHeight}">
 		<view class="filterTitle">{{title}}</view>
 		<view class="filterView">
@@ -41,6 +41,9 @@ export default{
 		isFullValue: {
 			type: Boolean,
 			default: false
+		},
+		defaultSelected: {
+			type: Array
 		},
 		title: {
 			type: String,
@@ -87,12 +90,26 @@ export default{
 		const systemInfo = uni.getSystemInfoSync()
 		this.wrapperHeight = systemInfo.windowHeight - systemInfo.statusBarHeight - 100 + 'px'
 	},
+	mounted() {
+		this.initDefaultSelected()
+	},
 	methods:{
+		initDefaultSelected(idx=0) {
+			if(this.defaultSelected?.length) {
+				this.wrapContent[idx].forEach((v, i)=> {
+					if(this.defaultSelected.includes(v.value) && v.children?.length) {
+						this.wrapContent[++idx] = v.children
+						this.initDefaultSelected(idx)
+					}
+				})
+				this.values = [...this.defaultSelected]
+			}
+		},
 		itemClick(wrapIdx, i) {
 			this.values[wrapIdx] = this.wrapContent[wrapIdx][i][this.valueKey]
 			this.values = this.values.slice(0, wrapIdx+1)
 			let children = this.wrapContent[wrapIdx][i][this.childrenKey]
-			if(children && children.length) {
+			if(children?.length) {
 				this.wrapContent[++wrapIdx] = children
 				this.wrapContent = this.wrapContent.slice(0, wrapIdx+1)
 				if(this.isFullValue) {
@@ -117,6 +134,9 @@ export default{
 				this.values = []
 				this.wrapContent = [this.wrapContent[0]]
 			}
+		},
+		popupChange(e) {
+			this.$emit('input', e.show)
 		}
 	}
 }
