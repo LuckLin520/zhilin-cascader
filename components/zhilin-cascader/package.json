@@ -1,0 +1,47 @@
+{
+  "_from": "zhilin-cascader",
+  "_id": "zhilin-cascader@1.1.0",
+  "_inBundle": false,
+  "_integrity": "sha512-aXHDbLdK+DNag0KEMdt9IIry4b4j7MEEHRKtXNEtSz73SlTY5fpWwsadpGgjr/TYbdRuY4+TiOs3t/c5YJMxpg==",
+  "_location": "/zhilin-cascader",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "zhilin-cascader",
+    "name": "zhilin-cascader",
+    "escapedName": "zhilin-cascader",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/zhilin-cascader/-/zhilin-cascader-1.1.0.tgz",
+  "_shasum": "4a49e7d548d851db2f50c0f58590cb72798d2262",
+  "_spec": "zhilin-cascader",
+  "_where": "C:\\Users\\HC101\\Documents\\HBuilderProjects\\zhilin-cascaderd",
+  "author": {
+    "name": "lucklin"
+  },
+  "bugs": {
+    "url": "https://github.com/LuckLin520/zhilin-cascader/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "动态级联选择器",
+  "homepage": "https://github.com/LuckLin520/zhilin-cascader#readme",
+  "license": "ISC",
+  "main": "index.js",
+  "name": "zhilin-cascader",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LuckLin520/zhilin-cascader.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.2.0"
+}
